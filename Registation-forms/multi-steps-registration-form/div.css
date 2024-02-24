@@ -1,0 +1,8 @@
+.wh{
+    display: flex;
+    gap: 2rem;
+}
+
+.left{
+    display: inline;
+}

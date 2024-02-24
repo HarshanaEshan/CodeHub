@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Year Input Example</title>
+</head>
+<body>
+
+<label for="startYear">Start Year:</label>
+<input type="number" id="startYear" name="startYear" min="1900" max="2100" oninput="updateEndYear(this.value)">
+
+<label for="endYear">End Year:</label>
+<input type="number" id="endYear" name="endYear" min="1900" max="2100" readonly>
+
+<script>
+function updateEndYear(startYear) {
+    // Parse the startYear as an integer
+    startYear = parseInt(startYear);
+
+    // Get the endYear input element
+    var endYearInput = document.getElementById('endYear');
+
+    // Set the value of the endYear input element
+    // You can customize how you want to set the end year value
+    // This example just adds 10 to the start year
+    endYearInput.value = startYear + 10;
+}
+</script>
+
+</body>
+</html>

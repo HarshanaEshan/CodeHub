@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Steps Registration Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="page" class="site">
+        <div class="container">
+            <div class="form-box">
+               <div class="progress">
+                    <div class="logo"><img src="logo.png" alt=""></div>
+                    <ul class="progress-steps">
+                        <li class="step active">
+                            <span class="stage-num"><a href=".form-one">1</a></span>
+                            <p>Personal<br/><span>30 secs to complete</span></p>
+                        </li>
+                        <li class="step">
+                            <span class="stage-num">2</span>
+                            <p>Body Details<br/><span>25 secs to complete</span></p>
+                        </li>
+                        <li class="step">
+                            <span class="stage-num">3</span>
+                            <p>Security<br/><span>35 secs to complete</span></p>
+                        </li>
+                    </ul>
+               </div>
+
+                <form action="">
+                    <div class="form-one form-step active">
+                        <h2>Personal Information</h2>
+                        <p>Enter your personal information correctly</p>
+                        <div>
+                            <label>First Name</label>
+                            <input type="text" placeholder='e.g. Harsnana'/>
+                        </div>
+                        <div>
+                            <label>Last Name</label>
+                            <input type="text" placeholder='e.g. Eshan'/>
+                        </div>
+                        <div class="birth">
+                            <label>Date of Birth</label>
+                            <div class="grouping">
+                                <input type="text" placeholder='DD'/>
+                                <input type="text" placeholder='MM'/>
+                                <input type="text" placeholder='YYYY' id="year" oninput="updateEndYear(this.value)"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-two form-step">
+                        <h2>Body Details </h2>
+                        <p>Enter your body details correctly</p>
+
+                        <div class="wh">
+                            <div class="wh grouping">
+                                <div class="left">
+                                    <div class="lbl-w"><label>Age</label></div>
+                                    <div class="">
+                                        <input type="text" id="age" readonly/>
+                                        <label class="imp">Years</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wh">
+                            <div class="wh grouping">
+                                <div class="left">
+                                    <div class="lbl-w"><label>Weight</label></div>
+                                    <div class="">
+                                        <input type="text"/>
+                                        <label class="imp">Kg</label>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="lbl-h"><label>Height</label></div>
+                                    <div class="">
+                                        <input type="text"/>
+                                        <label class="imp">Meters</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-three form-step">
+                        <h2>Security</h2>
+                        <div>
+                            <label>Email</label>
+                            <input type="email" placeholder='example@gainer.com' />
+                        </div>
+                        <div>
+                            <label>User Name</label>
+                            <input type="text" placeholder='username' />
+                        </div>
+                        <div>
+                            <label>Password</label>
+                            <input type="password" placeholder='Password' />
+                        </div>
+                        <div>
+                            <label>Confirm Password</label>
+                            <input type="text" placeholder='Confirm Password' />
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" />
+                            <label>Receive our news letter and special offers</label>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn-prev btnAll" type='button' disabled>Back</button>
+                        <button class="btn-next btnAll" type='button' >Next Step</button>
+                        <button class="btn-submit btnAll" type='button'>Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
